@@ -67,5 +67,8 @@ wget -O test.txt http://192.168.1.1:443/test.txt
 Connecting to 192.168.1.1:443 ...
 
 ➤ Command :
-root# scp -i ~/.ssh/id_rsa myfile.txt user@10.0.0.1 
+root# scp -i ~/.ssh/id_rsa myfile.txt user@10.0.0.1
+OR
+root# scp myfile.txt user@10.0.0.1:/home/user
+user@10.0.0.1's password:
 ```
