@@ -111,6 +111,8 @@ root# scp myfile.txt user@10.0.0.1:/home/user/* .
 • From the the attacker machine, download something from the victim machine (using ssh key)
 # scp -i <ssh_key>  <username>@<ip>:/<location>/<file> <where_to_upload>
 scp -i sshkey.pem user@10.0.0.1:/home/user/test.txt /tmp/
+OR
+scp victim@10.10.120.172:/home/victim/myexamplefile.zip .
 
 • From the attacker machine, upload something on a the victim machine
 root# scp -i ~/.ssh/id_rsa myfile.txt user@10.0.0.1
