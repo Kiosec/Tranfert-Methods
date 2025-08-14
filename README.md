@@ -127,4 +127,14 @@ scp -P 2222 myfile root@10.0.0.1:/home/kiosec/Documents/
 copy an entire directory, use the -r flag for recursive copy:
 scp -r /path/to/local/folder root@10.0.0.1:/home/kiosec/Documents/
 
+➤ Frequent errors :
+
+• Error "Received message too long xxxxxxxxx"
+# scp -i id_rsa authorized_keys kiosec@192.168.0.100:/home/kiosec/.ssh/authorized_keys
+scp: Received message too long 1094927173
+scp: Ensure the remote shell produces no output for non-interactive sessions.
+
+The solution is to split the message in multiple during sending. For this purpose, it necessary to add -O parameter:
+# scp -O -i id_rsa authorized_keys kiosec@192.168.0.100:/home/kiosec/.ssh/authorized_keys
+authorized_keys                                                         100%  738   778.3KB/s   00:00 
 ```
